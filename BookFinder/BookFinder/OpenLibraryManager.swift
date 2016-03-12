@@ -18,12 +18,16 @@ class OpenLibraryManager {
         
         let task = session.dataTaskWithURL(url) { (data, response, error) -> Void in
             if error != nil {
-                completionHandler(nil, error)
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    completionHandler(nil, error)
+                })
             } else {
-                if let data = data {
-                    let responseStr = NSString(data: data, encoding: NSUTF8StringEncoding)
-                    completionHandler(responseStr, nil)
-                }
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    if let data = data {
+                        let responseStr = NSString(data: data, encoding: NSUTF8StringEncoding)
+                        completionHandler(responseStr, nil)
+                    }
+                })
             }
             
         }
