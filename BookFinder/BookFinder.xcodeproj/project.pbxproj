@@ -12,6 +12,7 @@
 		6EE9BA4B1C941FFF002DE48D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EE9BA491C941FFF002DE48D /* Main.storyboard */; };
 		6EE9BA4D1C941FFF002DE48D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EE9BA4C1C941FFF002DE48D /* Assets.xcassets */; };
 		6EE9BA501C941FFF002DE48D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EE9BA4E1C941FFF002DE48D /* LaunchScreen.storyboard */; };
+		6EE9BA581C942084002DE48D /* OpenLibraryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9BA571C942084002DE48D /* OpenLibraryManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		6EE9BA4C1C941FFF002DE48D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6EE9BA4F1C941FFF002DE48D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EE9BA511C941FFF002DE48D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EE9BA571C942084002DE48D /* OpenLibraryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenLibraryManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				6EE9BA451C941FFF002DE48D /* AppDelegate.swift */,
 				6EE9BA471C941FFF002DE48D /* ViewController.swift */,
+				6EE9BA571C942084002DE48D /* OpenLibraryManager.swift */,
 				6EE9BA491C941FFF002DE48D /* Main.storyboard */,
 				6EE9BA4C1C941FFF002DE48D /* Assets.xcassets */,
 				6EE9BA4E1C941FFF002DE48D /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EE9BA481C941FFF002DE48D /* ViewController.swift in Sources */,
+				6EE9BA581C942084002DE48D /* OpenLibraryManager.swift in Sources */,
 				6EE9BA461C941FFF002DE48D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
