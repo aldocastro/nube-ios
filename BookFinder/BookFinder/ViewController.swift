@@ -35,7 +35,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         manager.getBookWithISBN(isbn) { (response, error) -> Void in
             if let error = error as NSError! {
-                self.showErrorAlertMessage("\(error.debugDescription)")
+                self.showErrorAlertMessage("\(error.localizedDescription)")
             } else {
                 if let response = response as String! {
                     self.showText(response)
