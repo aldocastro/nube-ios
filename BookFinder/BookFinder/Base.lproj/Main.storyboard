@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LtZ-WJ-49j">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--BookFinder-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BookFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please an ISBN" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="mo3-A1-Rvf">
+                                <rect key="frame" x="20" y="84" width="480" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="search"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="x9y-JN-UFH"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rD1-d1-CKR">
+                                <rect key="frame" x="20" y="134" width="560" height="446"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNm-u4-qx7">
+                                <rect key="frame" x="515" y="84" width="65" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="Xy1-eV-X9i"/>
+                                </constraints>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="didPressSearchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XOl-yJ-tyb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rD1-d1-CKR" secondAttribute="bottom" constant="20" id="4Nx-Kj-bXM"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="rD1-d1-CKR" secondAttribute="leading" id="HUy-Ix-2o0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hNm-u4-qx7" secondAttribute="trailing" id="Icp-GC-ODt"/>
+                            <constraint firstItem="hNm-u4-qx7" firstAttribute="leading" secondItem="mo3-A1-Rvf" secondAttribute="trailing" constant="15" id="UP3-KL-tcF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rD1-d1-CKR" secondAttribute="trailing" id="YvD-nt-BaP"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="mo3-A1-Rvf" secondAttribute="leading" id="a2G-Sr-UN3"/>
+                            <constraint firstItem="mo3-A1-Rvf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="aCo-eS-2FH"/>
+                            <constraint firstItem="rD1-d1-CKR" firstAttribute="top" secondItem="mo3-A1-Rvf" secondAttribute="bottom" constant="20" id="hTV-Ll-BHt"/>
+                            <constraint firstItem="hNm-u4-qx7" firstAttribute="centerY" secondItem="mo3-A1-Rvf" secondAttribute="centerY" id="uTQ-s1-dK7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="BookFinder" id="bq4-k8-6Lc"/>
+                    <connections>
+                        <outlet property="searchButton" destination="hNm-u4-qx7" id="1FR-sa-OZL"/>
+                        <outlet property="textField" destination="mo3-A1-Rvf" id="os2-Fk-5A8"/>
+                        <outlet property="textView" destination="rD1-d1-CKR" id="Bae-DA-oAB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1267" y="387"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CiD-Zs-iaS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LtZ-WJ-49j" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="82T-bO-sKx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kol-F0-fTI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iJT-Lu-pV0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="455" y="387"/>
+        </scene>
+    </scenes>
+</document>
