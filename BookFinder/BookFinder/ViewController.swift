@@ -11,8 +11,10 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var cover: UIImageView!
+    @IBOutlet weak var bookTitle: UILabel!
+    @IBOutlet weak var bookAuthors: UILabel!
     
     private let manager = OpenLibraryManager()
     
@@ -32,13 +34,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         guard let isbn = self.textField.text as String! where !isbn.isEmpty else {
             showErrorAlertMessage("Please enter a ISBN, this field still empty."); return
         }
-        
+
         manager.getBookWithISBN(isbn) { (response, error) -> Void in
             if let error = error as NSError! {
                 self.showErrorAlertMessage("\(error.localizedDescription)")
             } else {
-                if let response = response as String! {
-                    self.showText(response)
+                if let response = response as BookModel! {
+                    self.updateViewElements(response)
                 }
             }
         }
@@ -46,7 +48,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     private func clearFields() {
         textField.text = ""
-        textView.text = ""
+        bookTitle.text = ""
+        bookAuthors.text = ""
+        cover.image = nil
     }
     
     private func showErrorAlertMessage(message: String) {
@@ -56,8 +60,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         clearFields()
     }
     
-    private func showText(text: String) {
-        textView.text = text
+    private func updateViewElements(book: BookModel) {
+        bookTitle.text = book.title
+        bookAuthors.text = book.authorsDescription()
+        
+        manager.getBookImage(book.coverUrl()) { (image) -> Void in
+            self.cover.image = image
+        }
     }
     
     @IBAction func didPressSearchButton(sender: AnyObject) {

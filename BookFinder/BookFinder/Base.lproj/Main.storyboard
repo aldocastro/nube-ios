@@ -26,13 +26,6 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="x9y-JN-UFH"/>
                                 </connections>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rD1-d1-CKR">
-                                <rect key="frame" x="20" y="134" width="560" height="446"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNm-u4-qx7">
                                 <rect key="frame" x="515" y="84" width="65" height="30"/>
                                 <constraints>
@@ -43,25 +36,56 @@
                                     <action selector="didPressSearchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XOl-yJ-tyb"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w5K-7U-7To">
+                                <rect key="frame" x="212" y="193.5" width="176" height="229"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="176" id="0AQ-d8-KNn"/>
+                                    <constraint firstAttribute="height" constant="229" id="YCN-ge-KrJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pI6-ap-qDC">
+                                <rect key="frame" x="20" y="122" width="560" height="32.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dd1-Vh-iXm">
+                                <rect key="frame" x="277.5" y="162.5" width="46.5" height="23"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rD1-d1-CKR" secondAttribute="bottom" constant="20" id="4Nx-Kj-bXM"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="rD1-d1-CKR" secondAttribute="leading" id="HUy-Ix-2o0"/>
+                            <constraint firstItem="dd1-Vh-iXm" firstAttribute="top" secondItem="pI6-ap-qDC" secondAttribute="bottom" constant="8" id="8x6-4v-2aW"/>
+                            <constraint firstItem="w5K-7U-7To" firstAttribute="top" secondItem="dd1-Vh-iXm" secondAttribute="bottom" constant="8" id="Dbw-Wg-GV0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hNm-u4-qx7" secondAttribute="trailing" id="Icp-GC-ODt"/>
+                            <constraint firstItem="dd1-Vh-iXm" firstAttribute="centerX" secondItem="pI6-ap-qDC" secondAttribute="centerX" id="SqK-q4-c7f"/>
                             <constraint firstItem="hNm-u4-qx7" firstAttribute="leading" secondItem="mo3-A1-Rvf" secondAttribute="trailing" constant="15" id="UP3-KL-tcF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rD1-d1-CKR" secondAttribute="trailing" id="YvD-nt-BaP"/>
+                            <constraint firstItem="pI6-ap-qDC" firstAttribute="top" secondItem="mo3-A1-Rvf" secondAttribute="bottom" constant="8" id="ZBc-Op-0Wy"/>
                             <constraint firstAttribute="leadingMargin" secondItem="mo3-A1-Rvf" secondAttribute="leading" id="a2G-Sr-UN3"/>
                             <constraint firstItem="mo3-A1-Rvf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="aCo-eS-2FH"/>
-                            <constraint firstItem="rD1-d1-CKR" firstAttribute="top" secondItem="mo3-A1-Rvf" secondAttribute="bottom" constant="20" id="hTV-Ll-BHt"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="mo3-A1-Rvf" secondAttribute="leading" id="hZ3-By-KGv"/>
+                            <constraint firstItem="pI6-ap-qDC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jRa-Rr-KL4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pI6-ap-qDC" secondAttribute="trailing" id="kpJ-KH-L2k"/>
+                            <constraint firstItem="w5K-7U-7To" firstAttribute="centerX" secondItem="dd1-Vh-iXm" secondAttribute="centerX" id="m9b-bx-G6U"/>
+                            <constraint firstItem="pI6-ap-qDC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pyY-MK-FZ3"/>
                             <constraint firstItem="hNm-u4-qx7" firstAttribute="centerY" secondItem="mo3-A1-Rvf" secondAttribute="centerY" id="uTQ-s1-dK7"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="a2G-Sr-UN3"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="BookFinder" id="bq4-k8-6Lc"/>
                     <connections>
+                        <outlet property="bookAuthors" destination="dd1-Vh-iXm" id="ZM8-OD-41V"/>
+                        <outlet property="bookTitle" destination="pI6-ap-qDC" id="x6C-2h-Gq6"/>
+                        <outlet property="cover" destination="w5K-7U-7To" id="AEy-HK-7xb"/>
                         <outlet property="searchButton" destination="hNm-u4-qx7" id="1FR-sa-OZL"/>
                         <outlet property="textField" destination="mo3-A1-Rvf" id="os2-Fk-5A8"/>
-                        <outlet property="textView" destination="rD1-d1-CKR" id="Bae-DA-oAB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
