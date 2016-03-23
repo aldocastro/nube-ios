@@ -38,19 +38,21 @@ class BookListViewController : UITableViewController {
     
     @IBAction func didPressAddButton(sender: AnyObject) {
         let alert = UIAlertController(title: "Search Book", message: "Please insert a ISBN", preferredStyle: .Alert)
-        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Default, handler: nil)
         let saveAction = UIAlertAction(title: "Search", style: .Default) { (action) in
             if let textFields = alert.textFields, alertTextField = textFields[0] as UITextField!, text = alertTextField.text {
                 self.searchBookWithISBN(text)
             }
         }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Default, handler: nil)
-        
-        alert.addTextFieldWithConfigurationHandler(nil)
+        alert.addTextFieldWithConfigurationHandler { (textfield) in
+            textfield.placeholder = "ISBN here"
+            textfield.clearButtonMode = .Always
+            textfield.returnKeyType = .Search
+        }
         alert.addAction(saveAction)
         alert.addAction(cancelAction)
-        
+        alert.view.setNeedsLayout()
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
@@ -66,6 +68,8 @@ class BookListViewController : UITableViewController {
         cell.textLabel?.text = book.title
         return cell
     }
+    
+    // MARK: UIViewController Segues
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         guard segue.identifier == "showBookDetailSegue" else { return }
