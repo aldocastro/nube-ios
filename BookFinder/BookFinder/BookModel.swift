@@ -52,18 +52,15 @@ class BookModelFactory {
             
             if let _title = bookDict["title"] as? String {
                 title = _title
-                print("title: \(title)")
             }
             
             if let _authors = bookDict["authors"] as? [[String : String]] {
                 authors = _authors
-                print("authors: \(authors)")
             }
             
             if let coverDict = bookDict["cover"] as? [String:String],
                 largeCoverStr = coverDict["medium"] as String! {
                 cover = largeCoverStr
-                print("url: \(cover)")
             }
         }
         
