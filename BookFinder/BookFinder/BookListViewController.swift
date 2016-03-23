@@ -25,8 +25,17 @@ class BookListViewController : UITableViewController {
                 if let response = response as BookModel! {
                     self.books.append(response)
                     self.tableView.reloadData()
+                    self.showDetailViewControllerWithBook(response)
                 }
             }
+        }
+    }
+    
+    private func showDetailViewControllerWithBook(book: BookModel) {
+        if let storyboard = UIStoryboard(name: "Main", bundle: nil) as UIStoryboard!,
+            detailViewController = storyboard.instantiateViewControllerWithIdentifier("detailBookVC") as? ViewController {
+            detailViewController.setBook(book)
+            self.showViewController(detailViewController, sender: nil)
         }
     }
     
@@ -80,5 +89,4 @@ class BookListViewController : UITableViewController {
             bookDetailVC.setBook(book)
         }
     }
-    
 }
