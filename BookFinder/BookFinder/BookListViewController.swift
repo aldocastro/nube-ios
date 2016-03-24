@@ -15,19 +15,27 @@ class BookListViewController : UITableViewController {
     private var books = [BookModel]()
     var managedContextController: ManagedContextController!
     
+    //  TODO: move this to a controller / another abstraction layer
     private func searchBookWithISBN(isbn: String?) {
         guard let isbn = isbn where !isbn.isEmpty else {
             showErrorAlertMessage("Please enter a ISBN, this field still empty."); return
         }
         
-        manager.getBookWithISBN(isbn) { (response, error) -> Void in
-            if let error = error as NSError! {
-                self.showErrorAlertMessage("\(error.localizedDescription)")
-            } else {
-                if let response = response as BookModel! {
-                    self.books.append(response)
-                    self.tableView.reloadData()
-                    self.showDetailViewControllerWithBook(response)
+        if let book = self.managedContextController.fetchBooksWithIsbn(isbn) {
+            self.books.append(book)
+            self.tableView.reloadData()
+        } else {
+            manager.getBookWithISBN(isbn) { (response, error) -> Void in
+                if let error = error as NSError! {
+                    self.showErrorAlertMessage("\(error.localizedDescription)")
+                } else {
+                    if let response = response as BookModel! {
+                        self.books.append(response)
+                        self.managedContextController.insertBook(response)
+                        
+                        self.tableView.reloadData()
+                        self.showDetailViewControllerWithBook(response)
+                    }
                 }
             }
         }
@@ -65,6 +73,15 @@ class BookListViewController : UITableViewController {
         alert.addAction(cancelAction)
         alert.view.setNeedsLayout()
         self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //  TODO: move this to a controller / another abstraction layer
+        if let books = self.managedContextController.fetchBooks() {
+            self.books = books
+            self.tableView.reloadData()
+        }
     }
     
     //  MARK: UITableViewDelegate methods
