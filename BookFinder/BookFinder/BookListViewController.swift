@@ -13,7 +13,7 @@ class BookListViewController : UITableViewController {
     
     private let manager = OpenLibraryManager()
     private var books = [BookModel]()
-    var managedContext: NSManagedObjectContext!
+    var managedContextController: ManagedContextController!
     
     private func searchBookWithISBN(isbn: String?) {
         guard let isbn = isbn where !isbn.isEmpty else {
