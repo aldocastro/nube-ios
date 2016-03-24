@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E6A37041CA361130032ACF0 /* ManagedContextController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6A37031CA361130032ACF0 /* ManagedContextController.swift */; };
 		6E6FEF891C9B2C030056536A /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6FEF881C9B2C030056536A /* BookModel.swift */; };
 		6EE9BA461C941FFF002DE48D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9BA451C941FFF002DE48D /* AppDelegate.swift */; };
 		6EE9BA481C941FFF002DE48D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9BA471C941FFF002DE48D /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E6A37031CA361130032ACF0 /* ManagedContextController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedContextController.swift; sourceTree = "<group>"; };
 		6E6FEF881C9B2C030056536A /* BookModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 		6EE9BA421C941FFF002DE48D /* BookFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EE9BA451C941FFF002DE48D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,9 +77,10 @@
 				6EE9BA451C941FFF002DE48D /* AppDelegate.swift */,
 				6EE9BA471C941FFF002DE48D /* ViewController.swift */,
 				6EF9F3421CA31EB20012B3DB /* BookListViewController.swift */,
-				6EF9F3441CA333CD0012B3DB /* CoreDataStack.swift */,
 				6E6FEF881C9B2C030056536A /* BookModel.swift */,
 				6EE9BA571C942084002DE48D /* OpenLibraryManager.swift */,
+				6EF9F3441CA333CD0012B3DB /* CoreDataStack.swift */,
+				6E6A37031CA361130032ACF0 /* ManagedContextController.swift */,
 				6EF9F3511CA33F8D0012B3DB /* ManagedModel */,
 				6EE9BA491C941FFF002DE48D /* Main.storyboard */,
 				6EE9BA4C1C941FFF002DE48D /* Assets.xcassets */,
@@ -173,6 +176,7 @@
 				6EF9F3481CA33AD00012B3DB /* Book Finder.xcdatamodeld in Sources */,
 				6EE9BA481C941FFF002DE48D /* ViewController.swift in Sources */,
 				6EE9BA581C942084002DE48D /* OpenLibraryManager.swift in Sources */,
+				6E6A37041CA361130032ACF0 /* ManagedContextController.swift in Sources */,
 				6E6FEF891C9B2C030056536A /* BookModel.swift in Sources */,
 				6EF9F3451CA333CD0012B3DB /* CoreDataStack.swift in Sources */,
 				6EF9F34E1CA33F780012B3DB /* Book.swift in Sources */,
