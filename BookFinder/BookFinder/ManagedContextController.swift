@@ -66,10 +66,10 @@ class ManagedContextController {
         
         for authorModel in bookModel.authors {
             let author = Author(entity: authorEntity!, insertIntoManagedObjectContext: managedContext)
-            if let _name = authorModel["name"] {
+            if let _name = authorModel["name"] as String! {
                 author.name = _name
             }
-            if let _url = authorModel["url"] {
+            if let _url = authorModel["url"] as String! {
                 author.url = _url
             }
             
