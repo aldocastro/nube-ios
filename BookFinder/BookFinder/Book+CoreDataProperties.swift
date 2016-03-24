@@ -2,7 +2,7 @@
 //  Book+CoreDataProperties.swift
 //  BookFinder
 //
-//  Created by Aldo Castro on 23/03/16.
+//  Created by Aldo Castro on 24/03/16.
 //  Copyright © 2016 Aldo Castro. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -14,8 +14,9 @@ import CoreData
 
 extension Book {
 
-    @NSManaged var title: String?
     @NSManaged var cover: String?
+    @NSManaged var title: String?
+    @NSManaged var isbn: String?
     @NSManaged var authors: NSSet?
 
 }

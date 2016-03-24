@@ -7,11 +7,12 @@
     </entity>
     <entity name="Book" representedClassName=".Book" syncable="YES">
         <attribute name="cover" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isbn" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="authors" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Author" inverseName="books" inverseEntity="Author" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Book" positionX="-63" positionY="-18" width="128" height="88"/>
         <element name="Author" positionX="250" positionY="-0" width="128" height="88"/>
+        <element name="Book" positionX="-63" positionY="-18" width="128" height="103"/>
     </elements>
 </model>
