@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if let navigationController = self.window?.rootViewController as? UINavigationController,
             viewController = navigationController.topViewController as? BookListViewController {
-            viewController.managedContext = coreDataStack.context
+            viewController.managedContextController = ManagedContextController(context: coreDataStack.context)
         }
         
         return true
