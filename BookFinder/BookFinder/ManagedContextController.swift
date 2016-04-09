@@ -18,9 +18,7 @@ class ManagedContextController {
     }
     
     func fetchBooks() -> [BookModel]? {
-        let bookEntity = NSEntityDescription.entityForName("Book", inManagedObjectContext: managedContext)
-        let bookFetch = NSFetchRequest()
-        bookFetch.entity = bookEntity
+        let bookFetch = NSFetchRequest(entityName: "Book")
         
         do {
             if let result = try self.managedContext.executeRequest(bookFetch) as? NSAsynchronousFetchResult {
