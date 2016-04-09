@@ -95,21 +95,20 @@ class ManagedContextController {
         var isbn = "", title = "", cover = ""
         var authors = [[String: String]]()
         
-        if let _isbn = book.isbn {
+        if let _isbn = book.isbn as String! {
             isbn = _isbn
         }
-        if let _title = book.title {
+        if let _title = book.title as String! {
             title = _title
         }
-        if let _cover = book.cover {
+        if let _cover = book.cover as String! {
             cover = _cover
         }
         if let _authors = book.authors {
             var mAuthors = [[String: String]]()
             for author in _authors {
-                if let currentAuthor = author as? Author, name = currentAuthor.name, url = currentAuthor.url {
-                    mAuthors.append(["name" : name])
-                    mAuthors.append(["name" : url])
+                if let currentAuthor = author as? Author, name = currentAuthor.name as String!, url = currentAuthor.url as String! {
+                    mAuthors.append(["name" : name, "url" : url])
                 }
             }
             authors = mAuthors

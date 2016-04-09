@@ -31,10 +31,16 @@ class ViewController: UIViewController {
     private func loadViewElements() {
         guard let book = self.book else {return}
         
-        bookTitle.text = book.title
-        bookAuthors.text = book.authorsDescription()
-        manager.getBookImage(book.coverUrl()) { (image) -> Void in
-            self.cover.image = image
+        if let title = book.title as String! {
+            bookTitle.text = title
+        }
+        if let description = book.authorsDescription() as String! {
+            bookAuthors.text = description
+        }
+        if let imageURL = book.coverUrl() as NSURL! {
+            manager.getBookImage(imageURL) { (image) -> Void in
+                self.cover.image = image
+            }
         }
     }
     
