@@ -28,11 +28,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pI6-ap-qDC">
                                 <rect key="frame" x="20" y="122" width="560" height="33"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dd1-Vh-iXm">
-                                <rect key="frame" x="277" y="163" width="46" height="23"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dd1-Vh-iXm">
+                                <rect key="frame" x="20" y="163" width="560" height="23"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -44,6 +44,8 @@
                             <constraint firstItem="w5K-7U-7To" firstAttribute="top" secondItem="dd1-Vh-iXm" secondAttribute="bottom" constant="8" id="Dbw-Wg-GV0"/>
                             <constraint firstItem="pI6-ap-qDC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="58" id="QvO-w4-iTY"/>
                             <constraint firstItem="dd1-Vh-iXm" firstAttribute="centerX" secondItem="pI6-ap-qDC" secondAttribute="centerX" id="SqK-q4-c7f"/>
+                            <constraint firstItem="dd1-Vh-iXm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ZDv-qJ-xHg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dd1-Vh-iXm" secondAttribute="trailing" id="jNW-sF-sbL"/>
                             <constraint firstItem="pI6-ap-qDC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jRa-Rr-KL4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pI6-ap-qDC" secondAttribute="trailing" id="kpJ-KH-L2k"/>
                             <constraint firstItem="w5K-7U-7To" firstAttribute="centerX" secondItem="dd1-Vh-iXm" secondAttribute="centerX" id="m9b-bx-G6U"/>
@@ -82,7 +84,7 @@
                                             <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
