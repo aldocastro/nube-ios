@@ -15,12 +15,13 @@ struct BookModel {
     var cover: String
     
     func authorsDescription() -> String {
-        var description = ""
-        
+        var description = String()
         
         if authors.count > 1 {
             for author in authors {
-                description += "\(author["name"]), "
+                if let name = author["name"] as String! {
+                    description.appendContentsOf("\(name), ")
+                }
             }
         } else {
             if let firstAuthor = authors.first as [String : String]!, author = firstAuthor["name"] as String! {
