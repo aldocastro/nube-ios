@@ -17,6 +17,7 @@ class OpenLibraryManager {
     func getBookWithISBN(isbn: String, completionHandler: (BookModel?, NSError?) -> Void) {
         let url = NSURL(string: "\(baseURL):\(isbn)")!
         let task = session.dataTaskWithURL(url) { (data, response, error) -> Void in
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
             if error != nil {
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     completionHandler(nil, error)
@@ -43,11 +44,13 @@ class OpenLibraryManager {
             }
         }
         task.resume()
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
     }
     
     func getBookImage(url: NSURL?, completionHandler: (UIImage?) -> Void) {
         if let url = url {
             let downloadTask = session.dataTaskWithURL(url) { (data, response, error) -> Void in
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
                 if error != nil {
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
                         completionHandler(nil)
@@ -63,6 +66,7 @@ class OpenLibraryManager {
                 }
             }
             downloadTask.resume()
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         } else {
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 completionHandler(nil)

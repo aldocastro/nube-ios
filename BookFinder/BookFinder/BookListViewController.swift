@@ -15,7 +15,6 @@ class BookListViewController : UITableViewController {
     private var books = [BookModel]()
     var managedContextController: ManagedContextController!
     
-    //  TODO: move this to a controller / another abstraction layer
     private func searchBookWithISBN(isbn: String?) {
         guard let isbn = isbn where !isbn.isEmpty else {
             showErrorAlertMessage("Please enter a ISBN, this field still empty."); return
@@ -77,7 +76,6 @@ class BookListViewController : UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //  TODO: move this to a controller / another abstraction layer
         if let books = self.managedContextController.fetchBooks() {
             self.books = books
             self.tableView.reloadData()
